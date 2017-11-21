@@ -1,0 +1,117 @@
+= (with one more line!): logical equ.
+set - zbiór
+statement - either true or false, has a fixed logical value
+"Today is Wednesday" is not really a statement, because it's variable (one day it's true, but 6 out of 7 days it's not)
+A statement must be constant:
+x > 7 ain't a statement
+5 > 7 is
+A statement must not contain free variables, but it may contain variables involving quantifiers (for all x...)
+identity element - it changes nothing - f.e. 0 + a = a, or a * 1 = a
+commutativity - przemiennoœæ, np. dodawania
+
+p or q = q or p: not indentical, it's a logical equivalent, therefore use the symbol with three lines
+
+Typically used letters for logical statements: p, q, r (...)
+
+False is denoted by 0 or F
+True: 1, T
+
+v - or
+upside-down v - and
+=> - conditional, implication, if ... than
+<=> - 
+~ - negation, not true
+
+p|q|p or q|p and q|p => q|p <=> q| ~p|
+0|0|  0   |   0   |  1   |   1   | 1 |
+0|1|  1   |   0   |  1   |   0   | 1 |
+1|0|  1   |   0   |  0   |   0   | 0 |
+1|1|  1   |   1   |  1   |   1   | 0 |
+
+x^2 = -1 => x < 0
+This "statement" (not really, it contains variables) is true, because the left side is false
+
+y (p1, p2, ... pn) == z (p1, p2, ... pn) means that for the exact same variables you get the same logical value as output
+
+The above means:
+*** If and only if the logical value of y is the same as that of z for all evaluations of p1, p2 ... pn ***
+
+For n variables we have 2^n possibilities
+
+---------------------------------------------------------------------
+Laws of LOGIC
+-------------
+
+1. p and q == q and p, p or q == q or p - commutativity
+and - conjuction
+or - disjunction
+
+2. p and (q and r) == (p and q) and r, p or (q or r) == (p or q) or r - associativity
+(a + b) + c = a + (b + c)
+
+[Composition of functions]
+f(x) = x + 4
+g(x) = x^2
+(f o g)(x) = f(g(x)) = x^2 + 4
+o - ma³e kó³ko, symbol z³¹czenia
+(g o f)(x) = g(f(x)) = (x+4)^2
+
+(f o g) != (g o f)
+Composition of functions is associative but not commutative
+
+3. ~(~p) == p - double negation law
+
+4. ~1 == 0, ~0 == 1
+
+p|q|r|p and (q and r)|p and (q and r)|
+0|0|0|       0       |  (the same)
+0|0|1|       0       |
+0|1|0|       0       |
+0|1|1|       0       |
+1|0|0|       0       |
+1|0|1|       0       |
+1|1|0|       0       |
+1|1|1|       1       |
+
+5. ~(p or q) == ~p and ~q, ~(p and q) == ~p or ~q - de Morgan's law
+
+6. p => q == ~p or q, p <=> q == (p => q and q => p)
+
+p|q|p => q|~p or q|
+0|0|  1   |   1   |
+0|1|  1   |   1   |
+1|0|  0   |   0   |
+1|1|  1   |   1   |
+
+7. p or ~p == 1, p and ~p == 0
+
+Modal tautology and modal contradiction
+
+- Proof by transformation -
+~(p or q) == ~p and ~q
+
+p - ~r
+q - ~t
+
+~(~r or ~t) == ~(~r) and ~(~t)
+~(~(~r or ~t)) == ~(~(~r) and ~(~t))
+~r or ~t == ~(r and t)
+
+---------------------------------------------------------------------
+- Sets -
+--------
+A, B, C... is a subset of X
+
+2^X - set of all subsets of X
+either that or P(X)
+
+0 - empty set symbol
+0 € 2^X, X € 2^X
+
+|2^X| = 2^|X|
+
+|2^0| = 2|0|
+
+2^0 is 1
+
+A is a subset of B == ***for every x, x € A => x € B
